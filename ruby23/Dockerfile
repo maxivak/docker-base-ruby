@@ -27,6 +27,13 @@ RUN touch /etc/service/syslog-forwarder/down
 RUN touch /etc/service/nginx-log-forwarder/down
 
 
+# yarn
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update
+RUN apt-get -y install yarn
+
+
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
