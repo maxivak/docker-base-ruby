@@ -19,6 +19,12 @@ Contents
 docker build -t my-ruby github.com/maxivak/docker-base-ruby.git#master:version
 ```
 
+## ruby 2.4.2
+
+```
+docker build -t my-ruby github.com/maxivak/docker-base-ruby.git#master:ruby24
+```
+
 
 ## ruby 2.3.3
 
@@ -28,14 +34,13 @@ docker build -t my-ruby github.com/maxivak/docker-base-ruby.git#master:ruby23
 
 
 
-
 # Examples
 
 ## basic
 
 * build
 ```
-docker build -t my-ruby github.com/maxivak/docker-base-ruby.git#master:ruby23
+docker build -t my-ruby github.com/maxivak/docker-base-ruby.git#master:ruby24
 ```
 
 * run container
