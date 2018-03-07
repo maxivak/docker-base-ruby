@@ -27,6 +27,12 @@ RUN touch /etc/service/syslog-forwarder/down
 RUN touch /etc/service/nginx-log-forwarder/down
 
 
+# nodejs
+# node v8 (LTS)
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install -y nodejs
+
+
 # yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list

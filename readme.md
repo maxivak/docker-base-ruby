@@ -7,6 +7,9 @@ Base image with Ruby.
 Contents
 * rvm
 * ruby
+* nodejs
+* yarn
+
 
 
 
